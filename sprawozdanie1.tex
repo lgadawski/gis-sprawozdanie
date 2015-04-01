@@ -11,11 +11,16 @@
 \begin{document}
 \maketitle
 
-\section{Opis zadania}
+\section{Cel projektu}
 Realizacja projektu będzie polegała na zaimplementowaniu zmodyfikowanej wersji algorytmu Dijkstry, która umożliwi znalezienie dwóch rozłącznych krawędziowo ścieżek w skierowanym grafie dla dowolnej pary wierzchołków.
 
+Jednym z praktycznych zastosowań wyznaczanie najkrótszych rozłącznych krawędziowo ścieżek w grafie może być chęć poprawy niezawodności sieci przesyłowych poprzez wykorzystanie najbardziej optymalnych ścieżek jako zapasowyh ścieżek. Innym z zastosowaniem może być podział transmisji danych pomiędzy dwie ścieżki dzięki podczas wystąpienia awari możliwa jest częściowa transmisja danych.
+
 \subsection{Wykorzystany algorytm}
-Na podstawie \textit{Appendix A} do artykułu \cite{telecom}.
+Do realizacji celu projektu zostanie wykorzystany zmodyfikowany algorytm Dijkstry opisany w \textit{Appendix A} do artykułu \cite{telecom}. \\ \\
+Oznaczenia:\\
+$d(i)$ - odległość wierzchołka i od węzła startowego \\
+$P(i)$ - poprzednik wierzchołka i
 \begin{enumerate}
 \item Rozpocznij z:
 
@@ -42,12 +47,13 @@ $$
 \begin{itemize}
 \item[-] znajdź $j : d(j) = min d(i), i \in S$,
 \item[-] $S = V - \{j\}$,
-\item[-] jeśli $j = Z$ to STOP, w p.p. idź do kroku 3.
+\item[-] jeśli $j = Z$ to STOP gdzie $Z$ to wierzchołek końcowy,\\
+ w p.p. idź do kroku 3.
 \end{itemize}
 
 \item Krok:
 $$
-\forall d(j) + l(j, i) < d(i), \Rightarrow d(i) = d(j) + l(j, i), P(i) = j
+\forall d(j) + l(j, i) < d(i) \Rightarrow d(i) = d(j) + l(j, i), P(i) = j
 $$
 $$
 S = S \cup \{i\}
@@ -65,8 +71,7 @@ gdzie komentarz rozpoczyna się od znaku \#, każda linia reprezentuję pojedync
 
 \begin{thebibliography}{9}
 \bibitem{telecom} Ramesh Bhandari \emph{Optimal Diverse Routing in Telecommunication Fiber Networks}
-%\bibitem{Cormen} T.H. Cormen, C.E. Leiserson, R.L. Rivest, \emph{Wprowadzenie do algorytmów}, Wydawnictwo
-Naukowo-Techniczne, Warszawa 2001.
+%\bibitem{Cormen} T.H. Cormen, C.E. Leiserson, R.L. Rivest, \emph{Wprowadzenie do algorytmów}, Wydawnictwo Naukowo-Techniczne, Warszawa 2001.
 \end{thebibliography}
 
 \end{document}
