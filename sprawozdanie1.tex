@@ -1,0 +1,24 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\author{Korzeniowski Wojciech, Gadawski Łukasz}
+\title{Wyznaczenie sumarycznie najkrótszych ścieżek rozłącznych krawędziowo}
+\begin{document}
+\maketitle
+
+\section{Opis zadania}
+Realizacja projektu będzie polegała na zaimplementowaniu zmodyfikowanej wersji algorytmu Dijkstry, która umożliwi znalezienie dwóch rozłącznych krawędziowo ścieżek w skierowanym grafie dla dowolnej pary wierzchołków.
+
+\subsection{Założenia realizacyjne}
+Implementacja projektu zostanie wykonana w języku Java w formie aplikacji konsolowej. Dane wejściowe dotyczące rozpatrywanego grafu zostaną wczytane z pliku testowego o następującej strukturze:
+
+\verbatiminput{simpleGraph.txt}
+
+gdzie rozpoczyna się od znaku \#, każda linia reprezentuję pojedynczą krawędź rozpatrywanego grafu przy czym pierwsza kolumna opisuję etykietę wierzchołka początkowego danej krawędzi, kolumna druga definiuje etykietę wierzchołka końcowego, a w ostatniej kolumnie znajduje się waga konkretnej krawędzi.
+
+\end{document}
