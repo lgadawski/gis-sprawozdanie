@@ -1,0 +1,8 @@
+tartVertex EndVertex Weight
+A B 5
+A C 10
+B D 20
+B E 10
+C D 18
+C E 9
+D E 10
